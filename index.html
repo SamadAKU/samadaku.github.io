@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Set theme before first paint to avoid a flash of the wrong theme.
+      // Defaults to dark for first-time visitors; a saved choice always wins.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored || "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <title>Samad Khan · Software Developer</title>
+    <meta
+      name="description"
+      content="Samad Khan, a software developer building complete products and integrating AI to solve real problems. Computer Science, Ontario Tech."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="vignette" aria-hidden="true"></div>
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+      <div class="wrap nav-inner">
+        <a href="#top" class="brand"><span class="dot"></span>SAMAD&nbsp;KHAN</a>
+        <nav class="nav-links" id="navLinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Work</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#contact">Contact</a>
+          <a href="resume.pdf" download="Samad-Khan-Resume.pdf">Resume</a>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to light theme"
+            aria-pressed="true"
+          >
+            <svg
+              class="icon icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4.2"></circle>
+              <path
+                d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"
+              ></path>
+            </svg>
+            <svg
+              class="icon icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.2 14.6A8.6 8.6 0 1 1 9.4 3.8a7 7 0 0 0 10.8 10.8z"
+              ></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="hero wrap" id="hero">
+        <div class="hero-top">
+          <span class="hero-eyebrow mono"
+            >Open to 2027 opportunities</span
+          >
+          <div class="hero-name">
+            <h1>
+              <span class="metal">Samad Khan</span><span class="signal">.</span>
+            </h1>
+            <p class="hero-role">Software Engineer</p>
+            <div class="hero-photo">
+              <img
+                id="heroPhotoImg"
+                class="photo-img"
+                src="images/hero-photo.jpg"
+                alt="Samad Khan"
+              />
+              <span class="hero-photo-ph photo-fallback">SK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-foot">
+          <blockquote class="hero-quote">
+            "The ultimate measure of a man is not where he stands in moments of
+            comfort and convenience, but where he stands at times of challenge
+            and controversy."
+            <cite>Martin Luther King Jr.</cite>
+          </blockquote>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary"
+              >View the work <span class="arrow">→</span></a
+            >
+            <a href="resume.pdf" download="Samad-Khan-Resume.pdf" class="btn btn-ghost">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Resume
+            </a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ABOUT ===================== -->
+      <section class="section wrap about-section" id="about">
+        <span class="about-ghost" aria-hidden="true">01</span>
+        <div class="section-head reveal">
+          <span class="section-index">§01</span>
+          <h2 class="section-title">About</h2>
+          <span class="section-rule"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo-wrap reveal">
+            <div class="about-photo">
+              <img
+                id="aboutPhotoImg"
+                class="photo-img"
+                src="images/about-photo.jpg"
+                alt="Samad Khan"
+              />
+              <span class="about-photo-ph photo-fallback">SK</span>
+              <span class="about-photo-tag">Fig. 01 · Portrait</span>
+            </div>
+          </div>
+          <div class="about-body reveal">
+            <span class="about-quotemark" aria-hidden="true">"</span>
+            <p class="about-statement">
+              I like building things that actually ship, and making
+              <span class="signal">intelligent systems</span> that earn their
+              place in a product.
+            </p>
+            <p>
+              I'm a <strong>Computer Science Co-op student</strong> at Ontario
+              Tech University, currently interning as a
+              <strong>Software Engineer Intern at Voice Directed Tally
+              Systems</strong>, where I build and maintain enterprise Android
+              applications that sync field data in real time for clients across
+              forestry, lumber, and agriculture.
+            </p>
+            <p>
+              Previously, I interned at <strong>Accelerated Turn LLC</strong>,
+              where I engineered a multi-agent system to automate ETL, analysis,
+              and forecasting. That work taught me to care as much about
+              <strong>reliability</strong> as capability. I currently serve as
+              Vice President of the Computer Science Club at OTU, where I helped
+              organize HackHive, the first student hackathon backed by both
+              Microsoft and Kyndryl.
+            </p>
+          </div>
+        </div>
+        <div class="about-stats reveal">
+          <div class="about-stat">
+            <span class="k">Based in</span>
+            <span class="v">Ontario, Canada</span>
+          </div>
+          <div class="about-stat">
+            <span class="k">School</span>
+            <span class="v">Ontario Tech University</span>
+          </div>
+          <div class="about-stat">
+            <span class="k">Program</span>
+            <span class="v">B.Sc. Computer Science (Co-op)</span>
+          </div>
+          <div class="about-stat">
+            <span class="k">Focus</span>
+            <span class="v">Mobile &amp; AI Systems</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EXPERIENCE ===================== -->
+      <section class="section wrap" id="experience">
+        <div class="section-head reveal">
+          <span class="section-index">§02</span>
+          <h2 class="section-title">Experience</h2>
+          <span class="section-rule"></span>
+        </div>
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-num">01</div>
+            <div class="project-main">
+              <h3>Software Engineer Intern · VDTS</h3>
+              <ul class="exp-list">
+                <li>
+                  Facilitated over <strong>$100,000 in revenue</strong> by
+                  delivering application updates aligned with client needs,
+                  serving as a technical liaison to billion-dollar clients
+                  through revision cycles.
+                </li>
+                <li>
+                  Improved software quality and stability for a production
+                  platform deployed across <strong>6+ countries</strong> by
+                  shipping 100+ commits alongside senior engineers.
+                </li>
+                <li>
+                  Contributed to UI design in XML, debugging, and end-to-end
+                  testing throughout the full development lifecycle.
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">Android Studio</span><span class="tag">Java</span
+                ><span class="tag">XML</span>
+              </div>
+            </div>
+            <div class="project-meta">May 2026 → Current<br />Belleville, ON</div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-num">02</div>
+            <div class="project-main">
+              <h3>Software Developer Intern · Accelerated Turn LLC</h3>
+              <ul class="exp-list">
+                <li>
+                  Eliminated the need for manual analysts by designing a
+                  multi-agent architecture that automates ETL, analysis, and
+                  forecasting.
+                </li>
+                <li>
+                  Cleaned and transformed datasets exceeding
+                  <strong>5,000,000+ rows</strong> into SQL databases by
+                  engineering a pipeline using agentic coding.
+                </li>
+                <li>
+                  Enforced controlled LLM function calls to produce consistent,
+                  repeatable statistical reports and visualizations across CSV,
+                  JSON, XML, and TXT datasets.
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">CrewAI</span
+                ><span class="tag">SQL</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              Dec 2025 → Apr 2026<br />San Francisco, CA
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== SKILLS ===================== -->
+      <section class="section wrap" id="skills">
+        <div class="section-head reveal">
+          <span class="section-index">§03</span>
+          <h2 class="section-title">Skills</h2>
+          <span class="section-rule"></span>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">01</span>
+              <h3>Languages</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">Java</span><span class="tag">Python</span
+              ><span class="tag">Dart</span><span class="tag">C++</span
+              ><span class="tag">JavaScript</span><span class="tag">TypeScript</span
+              ><span class="tag">R</span><span class="tag">SQL</span
+              ><span class="tag">HTML/CSS</span><span class="tag">Bash/Shell</span
+              ><span class="tag">PHP</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">02</span>
+              <h3>Frameworks &amp; Libraries</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Flutter</span
+              ><span class="tag">Figma</span><span class="tag">OpenMP</span
+              ><span class="tag">POSIX</span><span class="tag">Google API</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">03</span>
+              <h3>Data &amp; ML</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">NumPy</span><span class="tag">Pandas</span
+              ><span class="tag">Matplotlib</span><span class="tag">Seaborn</span
+              ><span class="tag">OpenCV</span><span class="tag">CrewAI</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">04</span>
+              <h3>Databases &amp; Cloud</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span
+              ><span class="tag">MySQL</span><span class="tag">Azure</span
+              ><span class="tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">05</span>
+              <h3>Dev Tools</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">Android Studio</span><span class="tag">Git</span
+              ><span class="tag">Linux</span><span class="tag">PowerShell</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="label">
+              <span class="num">06</span>
+              <h3>Competencies</h3>
+            </div>
+            <div class="tags">
+              <span class="tag">Agile / Scrum</span><span class="tag">API Development</span
+              ><span class="tag">Mobile App Dev</span
+              ><span class="tag">Machine Learning</span><span class="tag">DevOps</span
+              ><span class="tag">Data Preparation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROJECTS ===================== -->
+      <section class="section wrap" id="projects">
+        <div class="section-head reveal">
+          <span class="section-index">§04</span>
+          <h2 class="section-title">Projects</h2>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-num">01</div>
+            <div class="project-main">
+              <h3>Sign Language Learning App</h3>
+              <p>
+                Enabled progressive sign-language skill building through an
+                interactive mobile app delivering structured lesson plans.
+                Established a lesson-based curriculum covering common phrases,
+                the alphabet, and everyday vocabulary through categorized,
+                skill-building modules.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Dart</span><span class="tag">Flutter</span
+                ><span class="tag">Android Studio</span>
+              </div>
+            </div>
+            <div class="project-side">
+              <div class="project-meta">Mar 2026<br />Mobile&nbsp;/&nbsp;EdTech</div>
+              <a
+                class="project-link"
+                href="https://github.com/ZephyrA1/Signly_Sign_Language"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-num">02</div>
+            <div class="project-main">
+              <h3>Spotify LLM Web Application</h3>
+              <p>
+                Built an LLM-driven natural-language interface to the Spotify
+                API that translates free-form prompts into structured,
+                resolvable song metadata, helping users discover music tailored
+                to their taste. Integrated Spotify's OAuth 2.0 flow to manage
+                token usage and authorize API requests throughout the pipeline.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">Node.js</span
+                ><span class="tag">LLM</span><span class="tag">OAuth 2.0</span>
+              </div>
+            </div>
+            <div class="project-side">
+              <div class="project-meta">Dec 2025<br />AI&nbsp;/&nbsp;Tooling</div>
+              <a
+                class="project-link"
+                href="https://github.com/SamadAKU/SpotifyRelatedWebapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-num">03</div>
+            <div class="project-main">
+              <h3>Financial Management App</h3>
+              <p>
+                Built a cross-platform financial-planning app that lets
+                families share expense reports, and designed an analytics
+                dashboard using data-visualization techniques to surface
+                actionable spending insights.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Dart</span><span class="tag">Flutter</span
+                ><span class="tag">Data Viz</span>
+              </div>
+            </div>
+            <div class="project-side">
+              <div class="project-meta">Jul 2025<br />Mobile&nbsp;/&nbsp;FinTech</div>
+              <a
+                class="project-link"
+                href="https://github.com/RBm0ss/MobileDevFinalProject"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== LEADERSHIP ===================== -->
+      <section class="section wrap" id="leadership">
+        <div class="section-head reveal">
+          <span class="section-index">§05</span>
+          <h2 class="section-title">Leadership &amp; Volunteering</h2>
+          <span class="section-rule"></span>
+        </div>
+        <div class="lead-grid">
+          <div class="lead-card reveal">
+            <div class="role">Vice President · Oct 2025 → Present</div>
+            <h3>Computer Science Club</h3>
+            <p>
+              Hosted HackHive, a hackathon that drew 200+ applicants and became
+              the first student event globally backed by both Microsoft and
+              Kyndryl. Previously led the club's marketing team, growing
+              engagement 300% to over 100,000 views in a single month.
+            </p>
+          </div>
+          <div class="lead-card reveal">
+            <div class="role">Volunteer · AMMA</div>
+            <h3>Tahir Heart Hospital, Pakistan</h3>
+            <p>
+              Supported care for 400+ patients and assisted within the surgery
+              room through the Ahmadiyya Muslim Medical Association. Took the
+              initiative to help coordinate the merger of two hospitals, hosting
+              conferences and supporting the IT department through the rollout of
+              the proposal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section class="wrap" id="contact">
+        <div class="contact reveal">
+          <span class="mono">§06 · Contact</span>
+          <h2>Let's build<br />something<span class="signal">.</span></h2>
+          <p>
+            I'm open to internships and new-grad roles in software and AI. The
+            fastest way to reach me is email. I read everything.
+          </p>
+          <div class="contact-links">
+            <a class="contact-link is-mail" href="mailto:Samadkhan244@hotmail.com"
+              >Email <span aria-hidden="true">→</span></a
+            >
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/samadaku/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              class="contact-link"
+              href="https://github.com/SamadAKU"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a class="contact-link" href="resume.pdf" download="Samad-Khan-Resume.pdf"
+              >Resume <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span class="mono">© <span id="year"></span> Samad Khan</span>
+        <span class="mono">Version 1.0.0-alpha</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
